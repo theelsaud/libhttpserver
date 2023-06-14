@@ -254,7 +254,11 @@ jobs:
         make
         echo !_____________________________!
         ls
-        cat Makefile
+        
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: ./build
 
     - name: Print config.log
       run: |
