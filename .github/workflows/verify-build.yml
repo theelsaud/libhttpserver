@@ -252,6 +252,8 @@ jobs:
           ../configure --disable-fastopen;
         fi
         make
+        echo !_____________________________!
+        ls
         cat Makefile
 
     - name: Print config.log
