@@ -211,6 +211,11 @@ jobs:
       
     - name: Install libmicrohttpd
       run: cd libmicrohttpd-0.9.64 ; sudo make install ;
+    
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: ./libmicrohttpd-0.9.64
       
     - name: Refresh links to shared libs
       run: sudo ldconfig ;
